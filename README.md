@@ -2,7 +2,6 @@
 # 📗 Table of Contents
 
 - [📖 Book-Store](#about-project)
-- [🚀 Screenshot](#screenshot)
 - [🛠 Built With](#built-with)
     - [Tech Stack](#tech-stack)
     - [Key Features](#key-features)
