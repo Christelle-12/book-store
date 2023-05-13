@@ -41,11 +41,11 @@ const ShowBooks = () => {
     setBooks(updatedBooks);
   };
 
-  const addBook = (name) => {
+  const addBook = ({ title, author }) => {
     const newBook = {
       item_id: `item${books.length + 1}`,
-      title: name,
-      author: 'Unknown',
+      title,
+      author,
       category: 'Unknown',
     };
 
