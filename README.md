@@ -134,10 +134,10 @@ to run tests, run the following command
 
 ## Future Features
 
-- [ ] **[Add Transitions using CSS]**
-- [ ] **[Add stylesheet]**
-- [ ] **[Add Css animations]**
-- [ ] **[Add Animations Features]**
+- [ ] **[Make use Bookstore API as backend]**
+- [ ] **[Style the app]**
+- [ ] **[Use axios with createAsyncThunk for request]**
+
 
 
 <p align="right">(<a href="#readme-top">back to top</a>)</p>
