@@ -1,7 +1,7 @@
 import React from 'react';
 import { useSelector, useDispatch } from 'react-redux';
 import Book from './Book';
-import { removeBook } from '../redux/books/booksSlice';
+import { removeBook, updateBook } from '../redux/books/booksSlice';
 
 const BooksDisplay = () => {
   const books = useSelector((state) => state.books);
@@ -11,6 +11,10 @@ const BooksDisplay = () => {
     dispatch(removeBook({ id }));
   };
 
+  const handleEditBook = (id, title, author) => {
+    dispatch(updateBook({ id, title, author }));
+  };
+
   return (
     <div>
       {books.map((book) => (
@@ -18,6 +22,7 @@ const BooksDisplay = () => {
           <Book
             book={book}
             deleteBookHandler={handleDeleteBook}
+            editBookHandler={handleEditBook}
           />
         </div>
       ))}
