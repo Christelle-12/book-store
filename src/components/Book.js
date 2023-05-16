@@ -1,5 +1,6 @@
 import React from 'react';
 import PropTypes from 'prop-types';
+import '../CSS/book.css';
 
 const Book = ({ book, deleteBookHandler, editBookHandler }) => {
   const handleDelete = () => {
@@ -11,11 +12,11 @@ const Book = ({ book, deleteBookHandler, editBookHandler }) => {
   };
 
   return (
-    <section>
+    <section className="wrapper">
       <h2>{book.title}</h2>
       <h3>{book.author}</h3>
       <p>{book.category}</p>
-      <ul>
+      <ul className="ul-but">
         <li>
           <button type="button">Comments</button>
         </li>
