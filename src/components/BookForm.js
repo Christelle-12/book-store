@@ -5,24 +5,28 @@ const BookForm = ({ addBook }) => {
   const titleRef = useRef();
   const authorRef = useRef();
 
-  const submitBookHandler = (e) => {
+  const addBookHandler = (e) => {
     e.preventDefault();
     const title = titleRef.current.value;
     const author = authorRef.current.value;
     if (title && author) {
-      addBook({ title, author });
+      const book = {
+        title,
+        author,
+      };
+      addBook(book);
+      titleRef.current.value = '';
+      authorRef.current.value = '';
     }
-    titleRef.current.value = '';
-    authorRef.current.value = '';
   };
+
   return (
     <div>
-      <form onSubmit={submitBookHandler}>
+      <form onSubmit={addBookHandler}>
         <div>
           <label htmlFor="title">
             <p>Title:</p>
             <input type="text" id="title" ref={titleRef} />
-            {' '}
           </label>
         </div>
         <div>
@@ -30,7 +34,6 @@ const BookForm = ({ addBook }) => {
             <p>Author:</p>
             <input type="text" id="author" ref={authorRef} />
           </label>
-
         </div>
         <button type="submit">Add</button>
       </form>

@@ -12,7 +12,6 @@ function App() {
     <Router>
       <div>
         <Navigation />
-
         <Routes>
           <Route path="/" element={<HomePage />} />
           <Route path="/categories" element={<CategoriesPage />} />
