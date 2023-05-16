@@ -1,9 +1,13 @@
 import React from 'react';
 import PropTypes from 'prop-types';
 
-const Book = ({ book, deleteBookHandler }) => {
+const Book = ({ book, deleteBookHandler, editBookHandler }) => {
   const handleDelete = () => {
     deleteBookHandler(book.item_id);
+  };
+
+  const handleEdit = () => {
+    editBookHandler(book.item_id);
   };
 
   return (
@@ -16,7 +20,9 @@ const Book = ({ book, deleteBookHandler }) => {
           <button type="button">Comments</button>
         </li>
         <li>
-          <button type="button">Edit</button>
+          <button type="button" onClick={handleEdit}>
+            Edit
+          </button>
         </li>
         <li>
           <button type="button" onClick={handleDelete}>
@@ -36,6 +42,7 @@ Book.propTypes = {
     category: PropTypes.string.isRequired,
   }).isRequired,
   deleteBookHandler: PropTypes.func.isRequired,
+  editBookHandler: PropTypes.func.isRequired,
 };
 
 export default Book;
