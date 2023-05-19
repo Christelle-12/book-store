@@ -16,12 +16,14 @@ const ButtonComp = () => {
 
   const renderBooks = () => books.map((book) => {
     const {
-      itemId,
+      // eslint-disable-next-line camelcase
+      item_id,
       title,
       author,
     } = book;
     return (
-      <div key={itemId}>
+    // eslint-disable-next-line camelcase
+      <div key={item_id}>
         <div>
           <p>
             <b>TITLE :</b>
@@ -43,7 +45,7 @@ const ButtonComp = () => {
             <li>
               <button
                 type="button"
-                onClick={() => dispatch(deleteBook(itemId))}
+                onClick={() => dispatch(deleteBook(item_id))}
               >
                 Delete
               </button>
