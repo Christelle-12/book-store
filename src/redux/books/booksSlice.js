@@ -47,7 +47,10 @@ const booksSlice = createSlice({
       })
       .addCase(deleteBook.fulfilled, (state, action) => {
         const id = action.payload;
-        state.books = state.books.filter((book) => book.item_id !== id);
+        const index = state.books.findIndex((book) => book.id === id);
+        if (index !== 1) {
+          state.books.splice(index, 1);
+        }
       })
       .addCase(getBooks.pending, (state) => {
         state.loading = true;
