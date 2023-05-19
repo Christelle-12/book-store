@@ -1,24 +1,28 @@
 import { createSlice, createAsyncThunk } from '@reduxjs/toolkit';
 import axios from 'axios';
 
-const API = 'https://us-central1-bookstore-api-e63c8.cloudfunctions.net/bookstoreApi/apps/q9hoQecqnNBnVOEEAIAT';
+const API = 'https://us-central1-bookstore-api-e63c8.cloudfunctions.net/bookstoreApi/apps/uJMha7Lpi2uDoTqENtNp';
 
 export const addBook = createAsyncThunk('books/ADD_BOOK', async (book) => {
   try {
-    await axios.post('https://us-central1-bookstore-api-e63c8.cloudfunctions.net/bookstoreApi/apps/', book);
-  } catch (e) {
-    throw new Error(e);
+    await axios.post(`${API}/books`, book);
+  } catch (error) {
+    throw new Error(error);
   }
   return book;
 });
 
 export const getBooks = createAsyncThunk('books/GET_BOOKS', async () => {
-  const resp = await axios.get(`${API}/books`);
-  const books = Object.entries(resp.data).map((item) => ({
-    ...item[1][0],
-    item_id: item[0],
-  }));
-  return books;
+  try {
+    const resp = await axios.get(`${API}/books`);
+    const books = Object.entries(resp.data).map((item) => ({
+      ...item[1][0],
+      item_id: item[0],
+    }));
+    return books;
+  } catch (error) {
+    throw new Error(error);
+  }
 });
 
 export const deleteBook = createAsyncThunk('books/DELETE_BOOK', async (id) => {
@@ -47,8 +51,8 @@ const booksSlice = createSlice({
       })
       .addCase(deleteBook.fulfilled, (state, action) => {
         const id = action.payload;
-        const index = state.books.findIndex((book) => book.id === id);
-        if (index !== 1) {
+        const index = state.books.findIndex((book) => book.item_id === id);
+        if (index !== -1) {
           state.books.splice(index, 1);
         }
       })
