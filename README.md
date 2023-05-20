@@ -2,6 +2,7 @@
 # 📗 Table of Contents
 
 - [📖 Book-Store](#about-project)
+- [🚀 Screenshot](#screenshot)
 - [🛠 Built With](#built-with)
     - [Tech Stack](#tech-stack)
     - [Key Features](#key-features)
@@ -22,11 +23,14 @@
 
 ## HTML+CSS Setup
 
-**Math-magician** is simple single page web application that servers as book store application built with React. It allows users to view, add, and delete books in a collection.
+**Bookstore** is simple web app offers a convenient way for users to manage their book collection, add new books, remove unwanted books, and track their reading progress.
+## 🚀 Screenshot <a name="screenshot"></a>
+![image](https://github.com/Christelle-12/book-store/assets/105784335/55a369b1-e53f-44f0-b818-ec99790dd9fd)
 
 ## 🛠 Built With <a name="built-with"></a>
 This project is built with:
 
+- ![Redux](https://img.shields.io/badge/-Redux-1d1919?style=flat&logo=redux)
 - ![React](https://img.shields.io/badge/-React-000000?style=flat&logo=react)
 - ![JavaScript](https://img.shields.io/badge/-JavaScript-000000?style=flat&logo=javascript)
 
@@ -54,6 +58,8 @@ This project is built with:
 
 <p align="right">(<a href="#readme-top">back to top</a>)</p>
 
+## 🚀 Live Demo <a name ="live"></a>
+[live demo](https://bookstore-web-app.onrender.com)
 
 ## 💻 Getting Started <a name="getting-started"></a>
 
@@ -163,7 +169,9 @@ If you like this project to give a positive feedback and comments that will go a
 ## 🙏 Acknowledgments <a name="acknowledgements"></a>
 
 
-I would like to express my gratitude to Microverse for this project.
+-I would like to express my gratitude to Microverse for this project.
+-Thanks [Zeplin](https://app.zeplin.io/project/5b35a9e13227086040f8eb75/screen/5b695e29bb8c844f118f9378) for the template design.
+
 <p align="right">(<a href="#readme-top">back to top</a>)</p>
 
 

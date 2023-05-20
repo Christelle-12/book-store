@@ -1,0 +1,35 @@
+.sect-add {
+  display: flex;
+  flex-direction: column;
+  padding-left: 6rem;
+}
+
+.sect-add hr {
+  width: 2px;
+}
+
+.sect-add h2 {
+  color: #686363;
+}
+
+.add-form {
+  display: flex;
+  align-items: baseline;
+}
+
+.inpt-txt {
+  width: 8%;
+  height: 0.813rem;
+  margin: 1.188rem 2.125rem 0 0;
+  padding: 0.813rem 35.688rem 0.813rem 1.063rem;
+}
+
+.selectcat {
+  height: 2.813rem;
+  width: 25%;
+}
+
+.Addbtn {
+  height: 2.813rem;
+  width: 8%;
+}

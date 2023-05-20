@@ -1,5 +1,4 @@
-.ul-but {
-  list-style-type: none;
-  display: flex;
-  gap: 5px;
+.container {
+  width: 100%;
+  box-sizing: border-box;
 }

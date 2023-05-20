@@ -1,0 +1,120 @@
+.bk-card {
+  display: flex;
+  flex-direction: row;
+  justify-content: space-between;
+  align-items: baseline;
+  padding-left: 2rem;
+  padding-right: 8rem;
+
+  /* height: fit-content; */
+  border: 1.5px solid #d8d3d3;
+  margin: 2.313rem 6.25rem 0;
+  border-radius: 4px;
+  background-color: #fff;
+}
+
+.bk-card:active {
+  background-color: #e8e8e8;
+}
+
+.bk-card:hover {
+  background-color: #e8e8e8;
+}
+
+.butt-li {
+  display: flex;
+  list-style-type: none;
+
+  /* background-color: #fff; */
+}
+
+.butt-li button {
+  border: none;
+  color: #4386bf;
+  background-color: #fff;
+  font-size: 0.875rem;
+}
+
+.butt-li button:hover {
+  background-color: #e8e8e8;
+}
+
+.remove {
+  background-color: #fff;
+  border: none;
+  color: #4386bf;
+  border-right: 2px solid #e8e8e8 !important;
+  border-left: 2px solid #e8e8e8 !important;
+}
+
+.custom-progress .CircularProgressbar-path {
+  stroke: #3b90e0;
+}
+
+.custom-progress .CircularProgressbar-text {
+  fill: #000;
+  font-size: 20px;
+}
+
+.comp {
+  color: #888181;
+  font-size: 16px;
+}
+
+.bk-title {
+  font-size: 2.2rem;
+  font-weight: bold;
+  padding: 0;
+}
+
+.bk-author {
+  font-size: 1.5rem;
+  font-weight: 300;
+  color: #4386bf;
+}
+
+.card2-progr {
+  display: flex;
+  gap: 2rem;
+  align-items: baseline;
+}
+
+.compl {
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+}
+
+.oval {
+  width: 5rem;
+  align-self: center;
+}
+
+.progr-per {
+  font-size: 3rem;
+}
+
+.progr-per span {
+  font-size: 1rem;
+  color: #7f857a;
+}
+
+.card3-curr {
+  height: 4.375rem;
+  margin: 1.125rem 3.688rem 0 4.938rem;
+  border-left: 2px solid rgb(226, 218, 218);
+  padding-left: 3rem;
+}
+
+.cur-word {
+  color: rgb(111, 114, 111);
+}
+
+.upgrade {
+  width: 8.938rem;
+  height: auto;
+  color: #fefe;
+  background-color: #3b90e0;
+  border: 1px solid #fef;
+  border-radius: 3px;
+}
