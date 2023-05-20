@@ -73,9 +73,43 @@
   color: #4386bf;
 }
 
+.card2-progr {
+  display: flex;
+  gap: 2rem;
+  align-items: baseline;
+}
+
+.compl {
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+}
+
+.oval {
+  width: 5rem;
+  align-self: center;
+}
+
+.progr-per {
+  font-size: 3rem;
+}
+
+.progr-per span {
+  font-size: 1rem;
+  color: #7f857a;
+}
+
 .card3-curr {
   height: 4.375rem;
   margin: 1.125rem 3.688rem 0 4.938rem;
   border-left: 2px solid rgb(226, 218, 218);
   padding-left: 3rem;
+}
+
+.upgrade {
+  width: 8.938rem;
+  height: auto;
+  color: #fefe;
+  background-color: #3b90e0;
+  border: 1px solid #fef;
 }

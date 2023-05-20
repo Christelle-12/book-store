@@ -8,7 +8,7 @@ import '../CSS/button.css';
 const ButtonComp = () => {
   const { books, loading, error } = useSelector((state) => state.books);
   const dispatch = useDispatch();
-  const [progress, setProgress] = useState(10);
+  const [progress, setProgress] = useState(30);
 
   useEffect(() => {
     dispatch(getBooks());
@@ -35,7 +35,11 @@ const ButtonComp = () => {
               <button type="button">Comments</button>
             </li>
             <li>
-              <button type="button" className="remove" onClick={() => dispatch(deleteBook(itemId))}>
+              <button
+                type="button"
+                className="remove"
+                onClick={() => dispatch(deleteBook(itemId))}
+              >
                 Remove
               </button>
             </li>
@@ -45,15 +49,34 @@ const ButtonComp = () => {
           </ul>
         </div>
         <div className="card2-progr">
-          <p className="percentg">
-            <CircularProgressbar value={progress} text={`${progress}%`} className="custom-progress" />
+          <p className="oval">
+            <CircularProgressbar
+              value={progress}
+              className="custom-progress"
+            />
           </p>
-          <p className="comp">Completed</p>
+
+          <p className="progr-per">
+            {progress}
+            %
+            {' '}
+            <br />
+            <span>
+              Completed
+            </span>
+
+          </p>
+          <p className="comp" />
+
         </div>
         <div className="card3-curr">
           <p className="cur-word">CURRENT CHAPTER</p>
           <p className="chap">Chapter 17</p>
-          <button type="button" className="up" onClick={handleProgressUpgrade}>
+          <button
+            type="button"
+            className="upgrade"
+            onClick={handleProgressUpgrade}
+          >
             UPDATE PROGRESS
           </button>
         </div>
