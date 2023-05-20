@@ -27,6 +27,7 @@
 ## 🛠 Built With <a name="built-with"></a>
 This project is built with:
 
+- ![Redux](https://img.shields.io/badge/-Redux-1d1919?style=flat&logo=redux)
 - ![React](https://img.shields.io/badge/-React-000000?style=flat&logo=react)
 - ![JavaScript](https://img.shields.io/badge/-JavaScript-000000?style=flat&logo=javascript)
 
@@ -163,7 +164,9 @@ If you like this project to give a positive feedback and comments that will go a
 ## 🙏 Acknowledgments <a name="acknowledgements"></a>
 
 
-I would like to express my gratitude to Microverse for this project.
+-I would like to express my gratitude to Microverse for this project.
+-Thanks [Zeplin](https://app.zeplin.io/project/5b35a9e13227086040f8eb75/screen/5b695e29bb8c844f118f9378) for the template design.
+
 <p align="right">(<a href="#readme-top">back to top</a>)</p>
 
 
