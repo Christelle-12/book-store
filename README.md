@@ -2,6 +2,7 @@
 # 📗 Table of Contents
 
 - [📖 Book-Store](#about-project)
+- [🚀 Screenshot](#screenshot)
 - [🛠 Built With](#built-with)
     - [Tech Stack](#tech-stack)
     - [Key Features](#key-features)
@@ -22,7 +23,9 @@
 
 ## HTML+CSS Setup
 
-**Math-magician** is simple single page web application that servers as book store application built with React. It allows users to view, add, and delete books in a collection.
+**Bookstore** is simple web app offers a convenient way for users to manage their book collection, add new books, remove unwanted books, and track their reading progress.
+## 🚀 Screenshot <a name="screenshot"></a>
+![image](https://github.com/Christelle-12/book-store/assets/105784335/55a369b1-e53f-44f0-b818-ec99790dd9fd)
 
 ## 🛠 Built With <a name="built-with"></a>
 This project is built with:
