@@ -55,6 +55,8 @@ This project is built with:
 
 <p align="right">(<a href="#readme-top">back to top</a>)</p>
 
+## 🚀 Live Demo <a name ="live"></a>
+[live demo](https://bookstore-web-app.onrender.com)
 
 ## 💻 Getting Started <a name="getting-started"></a>
 
