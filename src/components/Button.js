@@ -1,10 +1,14 @@
-import React, { useEffect } from 'react';
+import React, { useEffect, useState } from 'react';
 import { useSelector, useDispatch } from 'react-redux';
+import { CircularProgressbar } from 'react-circular-progressbar';
+// import 'react-circular-progressbar/dist/styles.css';
 import { deleteBook, getBooks } from '../redux/books/booksSlice';
+import '../CSS/button.css';
 
 const ButtonComp = () => {
-  const { books, Loading, Error } = useSelector((state) => state.books);
+  const { books, loading, error } = useSelector((state) => state.books);
   const dispatch = useDispatch();
+  const [progress, setProgress] = useState(10);
 
   useEffect(() => {
     dispatch(getBooks());
@@ -12,55 +16,56 @@ const ButtonComp = () => {
 
   const renderLoader = () => <div>Loading...</div>;
 
-  const renderError = () => <div>please try again later,,,</div>;
+  const renderError = () => <div>Please try again later...</div>;
+
+  const handleProgressUpgrade = () => {
+    setProgress(70);
+  };
 
   const renderBooks = () => books.map((book) => {
-    const {
-      // eslint-disable-next-line camelcase
-      item_id,
-      title,
-      author,
-    } = book;
+    const { itemId, title, author } = book;
+
     return (
-    // eslint-disable-next-line camelcase
-      <div key={item_id}>
-        <div>
-          <p>
-            <b>TITLE :</b>
-            <br />
-            {title}
-          </p>
-          <p>
-            <b>AUTHOR :</b>
-            <br />
-            {author}
-          </p>
-          <ul>
+      <div key={itemId} className="bk-card">
+        <div className="card1-info">
+          <p className="bk-title">{title}</p>
+          <p className="bk-author">{author}</p>
+          <ul className="butt-li">
             <li>
               <button type="button">Comments</button>
             </li>
             <li>
-              <button type="button">Edit</button>
-            </li>
-            <li>
-              <button
-                type="button"
-                onClick={() => dispatch(deleteBook(item_id))}
-              >
-                Delete
+              <button type="button" className="remove" onClick={() => dispatch(deleteBook(itemId))}>
+                Remove
               </button>
             </li>
+            <li>
+              <button type="button">Edit</button>
+            </li>
           </ul>
+        </div>
+        <div className="card2-progr">
+          <p className="percentg">
+            <CircularProgressbar value={progress} text={`${progress}%`} className="custom-progress" />
+          </p>
+          <p className="comp">Completed</p>
+        </div>
+        <div className="card3-curr">
+          <p className="cur-word">CURRENT CHAPTER</p>
+          <p className="chap">Chapter 17</p>
+          <button type="button" className="up" onClick={handleProgressUpgrade}>
+            UPDATE PROGRESS
+          </button>
         </div>
       </div>
     );
   });
 
   const renderContent = () => {
-    if (Loading) {
+    if (loading) {
       return renderLoader();
     }
-    if (Error) {
+    if (error) {
       return renderError();
     }
     return renderBooks();
