@@ -1,7 +1,8 @@
 import React, { useEffect, useState } from 'react';
 import { useSelector, useDispatch } from 'react-redux';
 import { CircularProgressbar } from 'react-circular-progressbar';
-// import 'react-circular-progressbar/dist/styles.css';
+import 'react-circular-progressbar/dist/styles.css';
+// import { deleteBook, getBooks } from '../redux/books/booksSlice';
 import { deleteBook, getBooks } from '../redux/books/booksSlice';
 import '../CSS/button.css';
 
@@ -23,10 +24,12 @@ const ButtonComp = () => {
   };
 
   const renderBooks = () => books.map((book) => {
-    const { itemId, title, author } = book;
+    // eslint-disable-next-line camelcase
+    const { item_id, title, author } = book;
 
     return (
-      <div key={itemId} className="bk-card">
+      // eslint-disable-next-line camelcase
+      <div key={item_id} className="bk-card">
         <div className="card1-info">
           <p className="bk-title">{title}</p>
           <p className="bk-author">{author}</p>
@@ -38,7 +41,7 @@ const ButtonComp = () => {
               <button
                 type="button"
                 className="remove"
-                onClick={() => dispatch(deleteBook(itemId))}
+                onClick={() => dispatch(deleteBook(book.item_id))}
               >
                 Remove
               </button>
@@ -49,25 +52,20 @@ const ButtonComp = () => {
           </ul>
         </div>
         <div className="card2-progr">
-          <p className="oval">
+          <div className="oval">
             <CircularProgressbar
               value={progress}
               className="custom-progress"
             />
-          </p>
+          </div>
 
           <p className="progr-per">
             {progress}
             %
-            {' '}
             <br />
-            <span>
-              Completed
-            </span>
-
+            <span>Completed</span>
           </p>
           <p className="comp" />
-
         </div>
         <div className="card3-curr">
           <p className="cur-word">CURRENT CHAPTER</p>

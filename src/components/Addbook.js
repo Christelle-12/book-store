@@ -2,6 +2,7 @@ import React, { useState } from 'react';
 import { useDispatch } from 'react-redux';
 import { v4 as uuidv4 } from 'uuid';
 import { addBook } from '../redux/books/booksSlice';
+import '../CSS/Addbook.css';
 
 const AddBook = () => {
   const initialState = {
@@ -25,33 +26,38 @@ const AddBook = () => {
     e.preventDefault();
     const newBook = {
       ...values,
-      item_id: uuidv4(),
+      itemId: uuidv4(),
     };
     dispatch(addBook(newBook));
     setValues(initialState);
   };
 
   return (
-    <section>
-      <h2>Insert Book</h2>
-      <form>
+    <section className="sect-add">
+      <hr />
+      <h2>ADD NEW BOOK</h2>
+      <form className="add-form">
         <input
           value={values.title}
           type="text"
           name="title"
           placeholder="Add title"
           onChange={handleChange}
+          className="inpt-txt"
         />
-        <br />
-        <input
-          value={values.author}
-          type="text"
-          name="author"
-          placeholder="Name Author"
+        <select
+          value={values.category}
+          name="category"
           onChange={handleChange}
-        />
+          className="selectcat"
+        >
+          <option value="">Category</option>
+          <option value="Horror">Horror</option>
+          <option value="Religious">Religious</option>
+          <option value="Adventure">Adventure</option>
+        </select>
         <br />
-        <button type="submit" onClick={handleSubmit} className="btnAdd">
+        <button type="submit" onClick={handleSubmit} className="Addbtn">
           Add
         </button>
       </form>
